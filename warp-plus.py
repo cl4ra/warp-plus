@@ -4,7 +4,11 @@ import datetime
 import random
 import string
 import time
-referrer = input("Your user-id : ")
+
+print ("Get free warp+ data by using this script by 6six6")
+print ("Copy User ID From : Setting/More Setting/Diagnostic/ID")
+print ("                  ")
+referrer = input("ID: ")
 def genString(stringLength):
     letters = string.ascii_letters + string.digits
     return ''.join(random.choice(letters) for i in range(stringLength))
@@ -34,12 +38,13 @@ def run():
                }
 
     r = requests.post(url, data=bodyString, headers=headers)
+    
     return r
 c = 1
 while True:
     result = run()
     if result.status_code == 200:
-        print(c,"GB added successfully !")
+        print(c,"+1GB")
         c = c + 1
     else:
         time.sleep(1)
